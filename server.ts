@@ -8,6 +8,7 @@ const wispserver = http.createServer((req, res) => {
 });
 wisp.options.allow_private_ips = true;
 wisp.options.allow_loopback_ips = true;
+wisp.options.dns_servers = ["94.140.14.14", "94.140.15.15"];
 
 wispserver.on("upgrade", (req, socket, head) => {
 	wisp.routeRequest(req, socket, head);
