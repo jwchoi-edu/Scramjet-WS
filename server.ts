@@ -10,6 +10,7 @@ wisp.options.allow_private_ips = true;
 wisp.options.allow_loopback_ips = true;
 wisp.options.dns_servers = ["94.140.14.14", "94.140.15.15"];
 wisp.options.dns_method = "resolve";
+wisp.options.dns_result_order = "ipv4first";
 
 wispserver.on("upgrade", (req, socket, head) => {
 	wisp.routeRequest(req, socket, head);
